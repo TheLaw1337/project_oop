@@ -1,0 +1,9 @@
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\bin\Debug\Szpital_Panel.exe.config
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\bin\Debug\Szpital_Panel.exe
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\bin\Debug\Szpital_Panel.pdb
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\obj\Debug\Szpital_Panel.exe
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\obj\Debug\Szpital_Panel.pdb
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\obj\Debug\Szpital_Panel.csprojAssemblyReference.cache
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\bin\Debug\Szpital_Pracownicy.dll
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\bin\Debug\Szpital_Pracownicy.pdb
+C:\Users\Daniel\source\repos\Szpital_Pracownicy\Szpital_Panel\obj\Debug\Szpital_Panel.csproj.CopyComplete
