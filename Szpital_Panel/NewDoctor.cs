@@ -7,10 +7,12 @@ using Szpital_Pracownicy;
 
 namespace Szpital_Panel
 {
-    public class NewDoctor
+    public class NewDoctor  
     {
         public static void AddDoctor()
         {
+            Program program = new Program();
+
             Console.Clear();
             Console.WriteLine("Please enter doctor surname: ");
             string temp_surname = Console.ReadLine();
@@ -71,6 +73,7 @@ namespace Szpital_Panel
 
             Pracownik p = new Doctor(temp_surname, temp_name, temp_pesel, temp_specialty, temp_pwz, temp_Password);
             Console.WriteLine("User added - new username: " + p.Username);
+            program.Add(p);
         }
     }
 }

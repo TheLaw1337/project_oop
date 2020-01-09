@@ -13,10 +13,12 @@ namespace Szpital_Panel
     public class Program
     {
         public static int choice;
+        public List<Pracownik> workers = new List<Pracownik>();
+        public static WorkersList workersList = Deserialize();
+
         public static void Main(string[] args)
         {
-            List<Pracownik> workers = new List<Pracownik>();
-            WorkersList workersList = Deserialize();
+            
 
             Console.WriteLine("**************Welcome****************");
             Console.WriteLine("Menu:\n");
@@ -54,14 +56,17 @@ namespace Szpital_Panel
             }
         }
 
-        static WorkersList Deserialize()
+        public static WorkersList Deserialize()
         {
             WorkersList list = new WorkersList();
             BinaryFormatter binary = new BinaryFormatter();
 
             if (File.Exists("hospital_data.dat")){
                 using (Stream fstream = new FileStream("hospital_data.dat", FileMode.Open, FileAccess.Read))
+                {
                     list = (WorkersList)binary.Deserialize(fstream);
+                    Console.WriteLine("Deserialization complete");
+                }
             }
             else
             {
@@ -72,7 +77,20 @@ namespace Szpital_Panel
             return list;
         }
 
-        
+        public void Serialize(WorkersList l)
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            using (Stream fStream = new FileStream("hospital_data.dat", FileMode.Create, FileAccess.Write))
+            {
+                binaryFormatter.Serialize(fStream, l);
+            }
+        }
+
+        public void Add(Pracownik pracownik)
+        {
+            workersList.ListOfWorkers.Add(pracownik);
+            Serialize(workersList);
+        }
     }
 
 }
