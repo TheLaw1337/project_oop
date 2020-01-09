@@ -13,7 +13,7 @@ namespace Szpital_Panel
     public class Program
     {
         public static int choice;
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             List<Pracownik> workers = new List<Pracownik>();
             WorkersList workersList = Deserialize();
@@ -35,7 +35,7 @@ namespace Szpital_Panel
             switch (choice)
             {
                 case 1:
-                    Console.WriteLine("TODO");
+                    NewDoctor.AddDoctor();
                     break;
                 case 2:
                     Console.WriteLine("TODO");
@@ -71,6 +71,8 @@ namespace Szpital_Panel
             }
             return list;
         }
+
+        
     }
 
 }

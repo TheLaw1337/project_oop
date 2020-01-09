@@ -11,7 +11,7 @@ namespace Szpital_Pracownicy
     {
         private string Function;
 
-        public Admin(string newName, string newSurname, int newPesel) : base(newSurname,newName,newPesel)
+        public Admin(string newName, string newSurname, long newPesel, string newPassword) : base(newSurname,newName,newPesel,newPassword)
         {
             this.Function = "Administrator";
         }

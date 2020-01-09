@@ -16,7 +16,7 @@ namespace Szpital_Pracownicy
         private string No_num; // No. - liczba porządkowa
         private int Shifts;
 
-        public Doctor(string newSurname, string newName, int newPesel, string newSpecialty, int newPWZnumber) : base(newSurname, newName, newPesel)
+        public Doctor(string newSurname, string newName, long newPesel, string newSpecialty, int newPWZnumber, string newPassword) : base(newSurname, newName, newPesel, newPassword)
         {
             this.No_num = $"Doc. {Number.ToString()}";
             this.Specialty = newSpecialty;

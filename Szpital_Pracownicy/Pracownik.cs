@@ -11,11 +11,11 @@ namespace Szpital_Pracownicy
     {
         public string Surname;
         public string Name;
-        public int Pesel;
+        public long Pesel;
         public string Username;
         public string Password;
 
-        public Pracownik(string newSurname, string newName, int newPesel)
+        public Pracownik(string newSurname, string newName, long newPesel, string newPassword)
         {
             Surname = newSurname;
             Name = newName;
