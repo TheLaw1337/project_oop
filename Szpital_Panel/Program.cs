@@ -18,8 +18,6 @@ namespace Szpital_Panel
 
         public static void Main(string[] args)
         {
-            
-
             Console.WriteLine("**************Welcome****************");
             Console.WriteLine("Menu:\n");
             Console.WriteLine("Add user:");
@@ -40,7 +38,7 @@ namespace Szpital_Panel
                     NewDoctor.AddDoctor();
                     break;
                 case 2:
-                    Console.WriteLine("TODO");
+                    NewNurse.AddNurse();
                     break;
                 case 3:
                     Console.WriteLine("TODO");

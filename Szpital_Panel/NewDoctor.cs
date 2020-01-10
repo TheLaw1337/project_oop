@@ -69,10 +69,11 @@ namespace Szpital_Panel
             }
 
             Console.WriteLine("Enter the new password:");
-            string temp_Password = Console.ReadLine();
+            string temp_password = Console.ReadLine();
 
-            Pracownik p = new Doctor(temp_surname, temp_name, temp_pesel, temp_specialty, temp_pwz, temp_Password);
-            Console.WriteLine("User added - new username: " + p.Username);
+            Pracownik p = new Doctor(temp_surname, temp_name, temp_pesel, temp_specialty, temp_pwz, temp_password);
+            Console.WriteLine("Doctor added:");
+            Console.WriteLine(p.GetWorkerData());
             program.Add(p);
         }
     }

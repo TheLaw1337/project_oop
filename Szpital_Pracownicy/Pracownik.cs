@@ -24,6 +24,11 @@ namespace Szpital_Pracownicy
             Password = "password";
         }
 
+        public virtual string GetWorkerData()
+        {
+            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}";
+        }
+
 
     }
 }
