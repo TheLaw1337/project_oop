@@ -7,11 +7,19 @@ using Szpital_Pracownicy;
 
 namespace Szpital_Panel
 {
-    public class NewDoctor  
+    public class NewDoctor
     {
+        static Doctor doc = new Doctor();
+        static ID_Operations id_ops = new ID_Operations("NR_Doc.txt");
+        static string path = "NR_Doc.txt";
+        public NewDoctor()
+        {
+            id_ops.GetID(path);
+        }
         public static void AddDoctor()
         {
             Program program = new Program();
+            
 
             Console.Clear();
             Console.WriteLine("Please enter doctor surname: ");
@@ -73,8 +81,14 @@ namespace Szpital_Panel
 
             Pracownik p = new Doctor(temp_surname, temp_name, temp_pesel, temp_specialty, temp_pwz, temp_password);
             Console.WriteLine("Doctor added:");
+            p.Number = id_ops.NextID(path);
+            p.No_num = $"Doc. {p.Number.ToString()}";
             Console.WriteLine(p.GetWorkerData());
+            
+            
+            Console.WriteLine(p.Number);
             program.Add(p);
+            //id_ops.NextID(path);
         }
     }
 }

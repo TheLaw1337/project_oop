@@ -41,7 +41,7 @@ namespace Szpital_Panel
                     NewNurse.AddNurse();
                     break;
                 case 3:
-                    Console.WriteLine("TODO");
+                    NewAdmin.AddAdmin();
                     break;
                 case 4:
                     Console.WriteLine("TODO");

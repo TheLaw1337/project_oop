@@ -10,14 +10,11 @@ namespace Szpital_Pracownicy
     public class Admin : Pracownik
     {
         private string Function;
-        private string No_num; // No. - liczba porządkowa
-        private static int Number;
+        
 
         public Admin(string newName, string newSurname, long newPesel, string newPassword) : base(newSurname,newName,newPesel,newPassword)
         {
-            Number++;
             this.Function = "Administrator";
-            this.No_num = $"Adm. {Number.ToString()}";
             
         }
     }

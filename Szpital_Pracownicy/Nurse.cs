@@ -14,6 +14,11 @@ namespace Szpital_Pracownicy
         private string No_num; // No. - liczba porządkowa
         private int Shifts;
 
+        public Nurse()
+        {
+
+        }
+
         public Nurse(string newSurname, string newName, long newPesel, string newPassword) : base(newSurname, newName, newPesel, newPassword)
         {
             Number++;
@@ -21,6 +26,8 @@ namespace Szpital_Pracownicy
             this.Function = "Nurse";
             
         }
+
+        
 
         public override string GetWorkerData()
         {

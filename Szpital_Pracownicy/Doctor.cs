@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Szpital_Pracownicy
 {
@@ -12,14 +14,21 @@ namespace Szpital_Pracownicy
         private string Specialty;
         private int PWZnumber;
         private string Function;
-        private static int Number;
-        private string No_num; // No. - liczba porządkowa
+        //public static int Number;
+        //public static string No_num; // No. - liczba porządkowa
         private int Shifts;
+        
+
+        public Doctor()
+        {
+
+        }
+
 
         public Doctor(string newSurname, string newName, long newPesel, string newSpecialty, int newPWZnumber, string newPassword) : base(newSurname, newName, newPesel, newPassword)
         {
-            Number++;
-            this.No_num = $"Doc. {Number.ToString()}";
+            Number = Number + 1;
+            No_num = $"Doc. {Number.ToString()}";
             this.Specialty = newSpecialty;
             this.PWZnumber = newPWZnumber;
             this.Function = "Doctor";
@@ -28,7 +37,8 @@ namespace Szpital_Pracownicy
 
         public override string GetWorkerData()
         {
-            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Specialty}, {this.PWZnumber}, {this.Username}";
+            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Specialty}, {this.PWZnumber}, {this.Username}, {No_num}";
         }
+
     }
 }

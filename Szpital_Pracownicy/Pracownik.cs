@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+
 
 namespace Szpital_Pracownicy
 {
     [Serializable()]
-    public class Pracownik
+    public class Pracownik : IWorker
     {
         public string Surname;
         public string Name;
         public long Pesel;
         public string Username;
         public string Password;
+        public int Number;
+        public string No_num;
 
         public Pracownik(string newSurname, string newName, long newPesel, string newPassword)
         {
@@ -24,11 +28,17 @@ namespace Szpital_Pracownicy
             Password = "password";
         }
 
+        public Pracownik()
+        {
+
+        }
+
         public virtual string GetWorkerData()
         {
             return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}";
         }
 
+        
 
     }
 }
