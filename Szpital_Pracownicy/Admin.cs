@@ -10,12 +10,22 @@ namespace Szpital_Pracownicy
     public class Admin : Pracownik
     {
         private string Function;
-        
+
+        public Admin()
+        {
+
+        }
 
         public Admin(string newName, string newSurname, long newPesel, string newPassword) : base(newSurname,newName,newPesel,newPassword)
         {
+            Number++;
+            this.No_num = $"Adm. {Number.ToString()}";
             this.Function = "Administrator";
-            
+        }
+
+        public override string GetWorkerData()
+        {
+            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}, {this.No_num}";
         }
     }
 }

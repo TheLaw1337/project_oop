@@ -9,6 +9,13 @@ namespace Szpital_Panel
 {
     public class NewAdmin
     {
+        static Admin adm = new Admin();
+        static ID_Operations id_ops = new ID_Operations("NR_Adm.txt");
+        static string path = "NR_Adm.txt";
+        public NewAdmin()
+        {
+            id_ops.GetID(path);
+        }
         public static void AddAdmin()
         {
             Program program = new Program();
@@ -37,7 +44,10 @@ namespace Szpital_Panel
 
             Pracownik ad = new Admin(temp_surname, temp_name, temp_pesel, temp_password);
             Console.WriteLine("Admin added:");
+            ad.Number = id_ops.NextID(path);
+            ad.No_num = $"Adm. {ad.Number.ToString()}";
             Console.WriteLine(ad.GetWorkerData());
+            Console.WriteLine(ad.Number);
             program.Add(ad);
         }
 

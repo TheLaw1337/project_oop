@@ -9,6 +9,13 @@ namespace Szpital_Panel
 {
     public class NewNurse
     {
+        static Nurse nur = new Nurse();
+        static ID_Operations id_ops = new ID_Operations("NR_Nur.txt");
+        static string path = "NR_Nur.txt";
+        public NewNurse()
+        {
+            id_ops.GetID(path);
+        }
         public static void AddNurse()
         {
             Program program = new Program();
@@ -37,7 +44,10 @@ namespace Szpital_Panel
 
             Pracownik p = new Nurse(temp_surname, temp_name, temp_pesel, temp_password);
             Console.WriteLine("Nurse added:");
+            p.Number = id_ops.NextID(path);
+            p.No_num = $"Nur. {p.Number.ToString()}";
             Console.WriteLine(p.GetWorkerData());
+            Console.WriteLine(p.Number);
             program.Add(p);
         }
     }

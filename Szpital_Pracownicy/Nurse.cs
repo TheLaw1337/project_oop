@@ -10,8 +10,8 @@ namespace Szpital_Pracownicy
     public class Nurse : Pracownik
     {
         private string Function;
-        private static int Number;
-        private string No_num; // No. - liczba porządkowa
+        //private static int Number;
+        //private string No_num; // No. - liczba porządkowa
         private int Shifts;
 
         public Nurse()
@@ -31,7 +31,7 @@ namespace Szpital_Pracownicy
 
         public override string GetWorkerData()
         {
-            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}";
+            return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}, {this.No_num}";
         }
     }
 }
