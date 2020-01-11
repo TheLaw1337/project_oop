@@ -47,7 +47,7 @@ namespace Szpital_Panel
                     Console.WriteLine("TODO");
                     break;
                 case 5:
-                    Console.WriteLine("TODO");
+                    ListAllWorkers.FillList();
                     break;
                 default:
                     break;

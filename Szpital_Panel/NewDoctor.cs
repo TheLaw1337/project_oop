@@ -87,6 +87,7 @@ namespace Szpital_Panel
             
             
             Console.WriteLine(p.Number);
+            Console.WriteLine(p.GetFunction());
             program.Add(p);
             //id_ops.NextID(path);
         }

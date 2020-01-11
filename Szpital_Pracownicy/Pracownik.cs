@@ -18,6 +18,7 @@ namespace Szpital_Pracownicy
         public string Password;
         public int Number;
         public string No_num;
+        private string Function;
 
         public Pracownik(string newSurname, string newName, long newPesel, string newPassword)
         {
@@ -38,7 +39,10 @@ namespace Szpital_Pracownicy
             return $"{this.Surname}, {this.Name}, {this.Pesel}, {this.Username}";
         }
 
-        
+        public string GetFunction()
+        {
+            return $"{this.Function}";
+        }
 
     }
 }
