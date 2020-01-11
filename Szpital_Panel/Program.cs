@@ -13,8 +13,9 @@ namespace Szpital_Panel
     public class Program
     {
         public static int choice;
-        public List<Pracownik> workers = new List<Pracownik>();
+        public static List<Pracownik> workers = new List<Pracownik>();
         public static WorkersList workersList = Deserialize();
+        
 
         public static void Main(string[] args)
         {
@@ -63,7 +64,6 @@ namespace Szpital_Panel
                 using (Stream fstream = new FileStream("hospital_data.dat", FileMode.Open, FileAccess.Read))
                 {
                     list = (WorkersList)binary.Deserialize(fstream);
-                    Console.WriteLine("Deserialization complete");
                 }
             }
             else
@@ -75,7 +75,7 @@ namespace Szpital_Panel
             return list;
         }
 
-        public void Serialize(WorkersList l)
+        public static void Serialize(WorkersList l)
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             using (Stream fStream = new FileStream("hospital_data.dat", FileMode.Create, FileAccess.Write))
