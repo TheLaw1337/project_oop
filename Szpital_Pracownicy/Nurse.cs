@@ -9,7 +9,7 @@ namespace Szpital_Pracownicy
     [Serializable()]
     public class Nurse : Pracownik
     {
-        private string Function;
+        //private string Function;
         //private static int Number;
         //private string No_num; // No. - liczba porządkowa
         private int Shifts;

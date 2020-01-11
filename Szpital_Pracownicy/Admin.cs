@@ -9,7 +9,7 @@ namespace Szpital_Pracownicy
     [Serializable()]
     public class Admin : Pracownik
     {
-        private string Function;
+        //private string Function;
 
         public Admin()
         {

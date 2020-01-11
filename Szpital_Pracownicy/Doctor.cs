@@ -13,7 +13,7 @@ namespace Szpital_Pracownicy
     {
         private string Specialty;
         private int PWZnumber;
-        private string Function;
+        //private string Function;
         //public static int Number;
         //public static string No_num; // No. - liczba porządkowa
         private int Shifts;

@@ -26,7 +26,7 @@ namespace Szpital_Panel
             foreach (Pracownik record in list.ListOfWorkers)
             {
                 
-                text = $"{record.GetFunction().ToUpper()} | {record.GetWorkerData()} ";
+                text = $"{record.GetFunction()} | {record.GetWorkerData()} ";
                 itemsList.Add(text);
             }
 
