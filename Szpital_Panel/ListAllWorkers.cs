@@ -21,7 +21,7 @@ namespace Szpital_Panel
         public static void FillList()
         {
             Console.Clear();
-            string text = null;
+            string text;
             list = Program.Deserialize();
             ArrayList itemsList = new ArrayList();
             
@@ -67,7 +67,7 @@ namespace Szpital_Panel
 
         public static void Update(string to_find)
         {
-            string text = null;
+            string text;
             list = Program.Deserialize();
             ArrayList itemsList = new ArrayList();
 
@@ -81,7 +81,7 @@ namespace Szpital_Panel
 
             foreach (var record in list.ListOfWorkers)
             {
-                if (record.No_num == to_find)
+                if (record.No_num.Equals(to_find))
                 {
                     Console.WriteLine(record.GetWorkerData());
 
@@ -147,16 +147,18 @@ namespace Szpital_Panel
 
                         Console.WriteLine("Enter the new password:");
                         temp_password = Console.ReadLine();
-                    }
-
-                    if (record.Function == "Doctor")
-                    {
-                        Pracownik p = new Doctor(temp_surname, temp_name, temp_pesel, temp_specialty, temp_pwz, temp_password);
-                        Console.WriteLine("Doctor data updated:");
-                        Console.WriteLine(p.GetWorkerData());
+                    
+                        record.Surname = temp_surname;
+                        record.Name = temp_name;
+                        record.Pesel = temp_pesel;
+                        //record.Specialty = temp_specialty;
+                        Console.WriteLine("Doctor data updated");
+                        //Console.WriteLine(p.GetWorkerData());
                         Program.Serialize(list);
                     }
+
                 }
+                break;
             }
             
         }

@@ -11,8 +11,8 @@ namespace Szpital_Pracownicy
     [Serializable()]
     public class Doctor : Pracownik
     {
-        private string Specialty;
-        private int PWZnumber;
+        public string Specialty;
+        public int PWZnumber;
         //private string Function;
         //public static int Number;
         //public static string No_num; // No. - liczba porządkowa
